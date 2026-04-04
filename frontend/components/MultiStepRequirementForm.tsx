@@ -152,6 +152,21 @@ export default function MultiStepRequirementForm() {
 
         <p className="form-subtitle">{meta.subtitle}</p>
 
+        <div className="quick-facts" aria-label="Platform highlights">
+          <div className="quick-fact-chip">
+            <span className="material-symbols-outlined" aria-hidden style={{ fontSize: '0.95rem' }}>bolt</span>
+            <span>Avg. match time: under 24h</span>
+          </div>
+          <div className="quick-fact-chip">
+            <span className="material-symbols-outlined" aria-hidden style={{ fontSize: '0.95rem' }}>verified</span>
+            <span>Pre-vetted talent network</span>
+          </div>
+          <div className="quick-fact-chip">
+            <span className="material-symbols-outlined" aria-hidden style={{ fontSize: '0.95rem' }}>shield</span>
+            <span>Secure post & response workflow</span>
+          </div>
+        </div>
+
         <form className="card" onSubmit={onSubmit}>
           {/* ── STEP 1: Event basics ── */}
           {step === 1 && (
@@ -284,7 +299,7 @@ export default function MultiStepRequirementForm() {
                       Edit
                     </button>
                   </div>
-                  {[
+                  {([
                     ['Event Name', state.eventName],
                     ['Event Type', state.eventType],
                     ['Date', state.dateType === 'range'
@@ -292,7 +307,9 @@ export default function MultiStepRequirementForm() {
                       : state.startDate],
                     ['Location', state.location],
                     state.venue ? ['Venue', state.venue] : null,
-                  ].filter(Boolean).map(([k, v]) => (
+                  ] as Array<[string, string] | null>)
+                    .filter((entry): entry is [string, string] => entry !== null)
+                    .map(([k, v]) => (
                     <div className="review-row" key={k as string}>
                       <span className="review-key">{k}</span>
                       <span className="review-val">{v}</span>
