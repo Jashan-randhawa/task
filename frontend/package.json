@@ -2,6 +2,7 @@
   "name": "vercel-root",
   "private": true,
   "scripts": {
+    "vercel-build": "npm --prefix frontend ci --include=dev && npm --prefix frontend run build"
     "vercel-build": "npm --prefix frontend ci && npm --prefix frontend run build"
   },
   "dependencies": {
