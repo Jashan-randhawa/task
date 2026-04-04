@@ -12,13 +12,7 @@
   margin-bottom: 2rem;
 }
 
-.stat-icon-wrapper.green {
-  background-color: #dcfce7;
-}
 
-.stat-icon-wrapper.orange {
-  background-color: #ffedd5;
-}
 
 .chart-legend {
   font-size: 0.75rem;

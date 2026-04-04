@@ -1,4 +1,11 @@
 /* Header Styles */
+.global-header {
+  background-color: var(--surface);
+  border-bottom: 1px solid var(--border-color);
+  position: sticky;
+  top: 0;
+  z-index: 100;
+}
 .app-header {
   display: flex;
   justify-content: space-between;
@@ -74,7 +81,7 @@
 }
 
 .icon-btn:hover {
-  background-color: #f1f5f9;
+  background-color: var(--surface-hover);
   color: var(--text-dark);
 }
 
@@ -82,7 +89,7 @@
   background: linear-gradient(135deg, #fbbf24, #f59e0b);
   width: 36px;
   height: 36px;
-  border-radius: 50%;
+  border-radius: var(--radius-sm);
   display: flex;
   align-items: center;
   justify-content: center;

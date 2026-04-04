@@ -78,7 +78,7 @@ const Step1Basics = ({ onNext }) => (
       <button className="btn btn-ghost">Cancel</button>
       <div className="flex gap-4">
         <button className="btn btn-secondary">Save Draft</button>
-        <button className="btn btn-primary bg-black" onClick={onNext} style={{backgroundColor: '#000'}}>Next Step: Talent Selection</button>
+        <button className="btn btn-primary" onClick={onNext}>Next Step: Talent Selection</button>
       </div>
     </div>
   </div>
@@ -132,7 +132,7 @@ const Step2Performer = ({ onNext, onBack }) => (
 
       <div className="step-actions flex justify-between items-center mt-auto">
         <button className="btn btn-ghost" onClick={onBack}>Back</button>
-        <button className="btn btn-primary bg-black" onClick={onNext} style={{backgroundColor: '#000'}}>Continue to Budget ➔</button>
+        <button className="btn btn-primary" onClick={onNext}>Continue to Budget ➔</button>
       </div>
     </div>
     <div className="step-sidebar-right">
@@ -207,21 +207,21 @@ const Step3Budget = ({ onNext, onBack }) => (
 
     <h3 className="font-bold text-lg mb-4">Allowances & Coverage</h3>
     <div className="flex flex-col gap-3 mb-8">
-      <label className="flex items-center gap-3 p-4 border rounded-xl cursor-pointer hover:border-primary bg-slate-50">
+      <label className="flex items-center gap-3 p-4 border rounded-xl cursor-pointer hover:border-primary" style={{ background: 'var(--surface-2)', borderColor: 'var(--border-color)' }}>
         <input type="checkbox" className="w-5 h-5 accent-primary rounded" defaultChecked />
         <div>
            <div className="font-bold">Travel Covered</div>
            <div className="text-sm text-gray">Flights and regional transit paid by client.</div>
         </div>
       </label>
-      <label className="flex items-center gap-3 p-4 border rounded-xl cursor-pointer hover:border-primary bg-slate-50">
+      <label className="flex items-center gap-3 p-4 border rounded-xl cursor-pointer hover:border-primary" style={{ background: 'var(--surface-2)', borderColor: 'var(--border-color)' }}>
         <input type="checkbox" className="w-5 h-5 accent-primary rounded" defaultChecked />
         <div>
            <div className="font-bold">Lodging Included</div>
            <div className="text-sm text-gray">Hotel or premium accommodation provided.</div>
         </div>
       </label>
-      <label className="flex items-center gap-3 p-4 border rounded-xl cursor-pointer hover:border-primary">
+      <label className="flex items-center gap-3 p-4 border rounded-xl cursor-pointer hover:border-primary" style={{ background: 'var(--surface-2)', borderColor: 'var(--border-color)' }}>
         <input type="checkbox" className="w-5 h-5 accent-primary rounded" />
         <div>
            <div className="font-bold">Per Diem (Meals)</div>
@@ -232,7 +232,7 @@ const Step3Budget = ({ onNext, onBack }) => (
 
     <div className="step-actions flex justify-between items-center mt-12">
       <button className="btn btn-ghost" onClick={onBack}>Back</button>
-      <button className="btn btn-primary bg-black" onClick={onNext} style={{backgroundColor: '#000'}}>Review Post ➔</button>
+      <button className="btn btn-primary" onClick={onNext}>Review Post ➔</button>
     </div>
   </div>
 );
@@ -274,19 +274,19 @@ const Step4Review = ({ onBack, onSubmit }) => (
           </div>
           <h3 className="text-xl font-bold mb-4">Requirement Details</h3>
           <div className="flex gap-4">
-            <div className="bg-slate-50 p-4 rounded-lg flex-1">
+            <div className="p-4 rounded-lg flex-1" style={{ background: 'var(--surface-2)' }}>
               <p className="text-xs text-gray font-bold mb-1">CATEGORY</p>
               <p className="font-semibold flex items-center gap-2"><span className="text-primary">🪑</span> Stage Management</p>
             </div>
-            <div className="bg-slate-50 p-4 rounded-lg flex-1">
+            <div className="p-4 rounded-lg flex-1" style={{ background: 'var(--surface-2)' }}>
               <p className="text-xs text-gray font-bold mb-1">TYPE</p>
               <p className="font-semibold flex items-center gap-2"><span className="text-primary">💼</span> On-site Lead</p>
             </div>
-            <div className="bg-slate-50 p-4 rounded-lg flex-1">
+            <div className="p-4 rounded-lg flex-1" style={{ background: 'var(--surface-2)' }}>
               <p className="text-xs text-gray font-bold mb-1">DURATION</p>
               <p className="font-semibold flex items-center gap-2"><span className="text-primary">⏱️</span> 4 Days (32 Hours)</p>
             </div>
-            <div className="bg-slate-50 p-4 rounded-lg flex-1">
+            <div className="p-4 rounded-lg flex-1" style={{ background: 'var(--surface-2)' }}>
               <p className="text-xs text-gray font-bold mb-1">BUDGET</p>
               <p className="font-semibold flex items-center gap-2"><span className="text-primary">💵</span> $4,500 - $6,000</p>
             </div>
@@ -310,8 +310,8 @@ const Step4Review = ({ onBack, onSubmit }) => (
       </div>
       
       <div className="w-1/3 flex flex-col gap-6">
-        <div className="bg-blue-50 p-8 rounded-xl flex flex-col items-center justify-center text-center h-48 border border-blue-100">
-          <div className="w-12 h-12 bg-white rounded-full flex items-center justify-center mb-4 text-primary shadow-sm">
+        <div className="p-8 rounded-xl flex flex-col items-center justify-center text-center h-48 border" style={{ background: 'rgba(45,212,191,0.08)', borderColor: 'rgba(45,212,191,0.2)' }}>
+          <div className="w-12 h-12 rounded-full flex items-center justify-center mb-4 text-primary shadow-sm" style={{ background: 'var(--surface)' }}>
             <Check size={24} />
           </div>
           <h3 className="font-bold text-lg">Ready to Launch</h3>
@@ -385,7 +385,7 @@ export default function CreateEvent() {
       </aside>
 
       <div className="create-main">
-        <div className="create-container bg-white rounded-xl border p-8 shadow-sm min-h-full">
+        <div className="create-container rounded-xl border p-8 shadow-sm min-h-full">
           <Routes>
             <Route path="/" element={<Navigate to="step1" replace />} />
             <Route path="step1" element={<Step1Basics onNext={() => navigate('/create-event/step2')} />} />

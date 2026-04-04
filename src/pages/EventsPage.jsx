@@ -59,7 +59,7 @@ export default function EventsPage() {
             <h1 className="text-3xl font-bold text-dark mb-2">Events Summary</h1>
             <p className="text-gray">Manage and track your premium event lifecycle and talent deployments.</p>
           </div>
-          <button className="btn btn-primary bg-black" onClick={() => navigate('/create-event/step1')} style={{ backgroundColor: '#000' }}>
+          <button className="btn btn-primary" onClick={() => navigate('/create-event/step1')}>
             <Plus size={18} /> New Event
           </button>
         </div>
@@ -121,7 +121,7 @@ export default function EventsPage() {
               </div>
             </div>
             
-            <div className="event-card-footer p-4 bg-slate-50 flex justify-between items-center text-xs text-gray border-t">
+            <div className="event-card-footer p-4 flex justify-between items-center text-xs text-gray border-t">
                <span>Last active {event.lastActive}</span>
                <button className="font-semibold text-primary hover:underline" onClick={() => navigate(`/create-event/step4`)}>View Details</button>
             </div>

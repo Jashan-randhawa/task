@@ -3,14 +3,13 @@ import { EyeOff, Eye } from 'lucide-react';
 import { useNavigate, Link } from 'react-router-dom';
 import './Auth.css';
 
-export default function SignUpPage() {
+export default function SignInPage() {
   const navigate = useNavigate();
   const [showPassword, setShowPassword] = useState(false);
   const [email, setEmail] = useState('');
   const [password, setPassword] = useState('');
-  const [confirmPassword, setConfirmPassword] = useState('');
 
-  const handleSignup = (e) => {
+  const handleLogin = (e) => {
     e.preventDefault();
     navigate('/dashboard');
   };
@@ -18,9 +17,9 @@ export default function SignUpPage() {
   return (
     <div className="auth-wrapper">
       <div className="auth-card">
-        <h1 className="auth-title">Signup</h1>
+        <h1 className="auth-title">Login</h1>
 
-        <form onSubmit={handleSignup}>
+        <form onSubmit={handleLogin}>
           <div className="auth-input-group">
             <input 
               type="email" 
@@ -34,22 +33,11 @@ export default function SignUpPage() {
 
           <div className="auth-input-group">
             <input 
-              type="password" 
-              className="auth-input" 
-              placeholder="Create password" 
-              value={password}
-              onChange={(e) => setPassword(e.target.value)}
-              required 
-            />
-          </div>
-
-          <div className="auth-input-group" style={{ marginBottom: '1.5rem' }}>
-            <input 
               type={showPassword ? "text" : "password"} 
               className="auth-input" 
-              placeholder="Confirm password" 
-              value={confirmPassword}
-              onChange={(e) => setConfirmPassword(e.target.value)}
+              placeholder="Password" 
+              value={password}
+              onChange={(e) => setPassword(e.target.value)}
               required 
             />
             <span className="auth-icon-right" onClick={() => setShowPassword(!showPassword)}>
@@ -57,13 +45,15 @@ export default function SignUpPage() {
             </span>
           </div>
 
+          <Link to="#" className="auth-forgot">Forgot password?</Link>
+
           <button type="submit" className="auth-btn-primary">
-            Signup
+            Login
           </button>
         </form>
 
         <div className="auth-switch">
-          Already have an account? <Link to="/signin">Login</Link>
+          Don't have an account? <Link to="/signup">Signup</Link>
         </div>
 
         <div className="auth-divider">Or</div>

@@ -7,7 +7,7 @@ export default function Sidebar() {
   const navigate = useNavigate();
   const location = useLocation();
 
-  if (location.pathname === '/signup') return null;
+  if (location.pathname === '/signup' || location.pathname === '/signin') return null;
 
   return (
     <aside className="global-sidebar">

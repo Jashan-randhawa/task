@@ -10,6 +10,7 @@ import EventsPage from './pages/EventsPage';
 import TalentPage from './pages/TalentPage';
 import AnalyticsPage from './pages/AnalyticsPage';
 import SignUpPage from './pages/SignUpPage';
+import SignInPage from './pages/SignInPage';
 
 function AppContent() {
   return (
@@ -21,6 +22,7 @@ function AppContent() {
           <Routes>
             <Route path="/" element={<Navigate to="/signup" replace />} />
             <Route path="/signup" element={<SignUpPage />} />
+            <Route path="/signin" element={<SignInPage />} />
             <Route path="/dashboard" element={<ArchitectDashboard />} />
             <Route path="/talent" element={<TalentPage />} />
             <Route path="/events" element={<EventsPage />} />

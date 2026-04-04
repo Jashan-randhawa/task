@@ -65,7 +65,7 @@
   display: flex;
   justify-content: center;
   align-items: center;
-  background: white;
+  background: var(--surface);
   position: relative;
   overflow-y: auto;
 }
@@ -111,12 +111,34 @@
   display: flex;
   align-items: center;
   justify-content: center;
-  background: white;
+  background: var(--surface-2);
   border: 1px solid var(--border-color);
   border-radius: var(--radius-sm);
   padding: 0.75rem;
   transition: all 0.2s;
 }
+
+.auth-divider {
+  display: flex;
+  align-items: center;
+  text-align: center;
+  color: var(--text-gray);
+  font-size: 0.75rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  margin: 2rem 0;
+}
+
+.auth-divider::before, 
+.auth-divider::after {
+  content: '';
+  flex: 1;
+  border-bottom: 1px solid var(--border-color);
+}
+
+.auth-divider::before { margin-right: 1rem; }
+.auth-divider::after { margin-left: 1rem; }
 
 .social-btn:hover {
   background: #f8fafc;

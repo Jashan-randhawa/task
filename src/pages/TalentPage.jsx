@@ -106,13 +106,13 @@ export default function TalentPage() {
           </div>
 
           <div className="flex gap-4">
-            <div className="filters-group bg-white border rounded-lg p-1 flex gap-1">
+            <div className="filters-group p-1 flex gap-1">
               <button className={`filter-btn ${activeFilter === 'all' ? 'active' : ''}`} onClick={() => setActiveFilter('all')}>All Roles</button>
               <button className={`filter-btn ${activeFilter === 'speaker' ? 'active' : ''}`} onClick={() => setActiveFilter('speaker')}>Speakers</button>
               <button className={`filter-btn ${activeFilter === 'performer' ? 'active' : ''}`} onClick={() => setActiveFilter('performer')}>Performers</button>
               <button className={`filter-btn ${activeFilter === 'crew' ? 'active' : ''}`} onClick={() => setActiveFilter('crew')}>Crew</button>
             </div>
-            <button className="btn btn-secondary bg-white"><Filter size={16} /> More Filters</button>
+            <button className="btn btn-secondary"><Filter size={16} /> More Filters</button>
           </div>
         </div>
       </div>

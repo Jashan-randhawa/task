@@ -6,7 +6,7 @@ export default function Header() {
   const navigate = useNavigate();
   const location = useLocation();
 
-  if (location.pathname === '/signup') return null;
+  if (location.pathname === '/signup' || location.pathname === '/signin') return null;
 
   return (
     <header className="global-header flex items-center justify-between px-8 py-4 border-b">

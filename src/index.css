@@ -1,11 +1,12 @@
-@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&display=swap');
 
 :root {
   --primary: #2dd4bf;      
   --primary-hover: #14b8a6;
   --secondary: #a855f7;    
-  --bg-color: #09090b;     
-  --surface: #18181b;      
+  --bg-color: #080b0f;     
+  --surface: #0f1318;      
+  --surface-2: #161c24;
   --surface-hover: #27272a;
   --text-dark: #f8fafc;    
   --text-gray: #a1a1aa;    
@@ -21,7 +22,7 @@
   --radius-md: 16px;
   --radius-lg: 24px;
   --radius-full: 9999px;
-  --font-family: 'Inter', sans-serif;
+  --font-family: 'DM Sans', sans-serif;
   --transition: all 0.3s cubic-bezier(0.16, 1, 0.3, 1);
 }
 
@@ -98,7 +99,7 @@ ul, ol {
 
 .btn-primary {
   background: linear-gradient(135deg, var(--primary), var(--secondary));
-  color: white;
+  color: #080b0f;
   box-shadow: 0 4px 14px 0 rgba(45, 212, 191, 0.3);
   border: 1px solid rgba(255,255,255,0.1);
 }
@@ -243,3 +244,19 @@ ul, ol {
 .font-semibold { font-weight: 600; }
 .text-primary { color: var(--primary); }
 .text-gray { color: var(--text-gray); }
+
+/* Global Grid & Stat Cards (Moved from Dashboard to Global) */
+.stats-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(240px, 1fr)); gap: 1.5rem; }
+.stat-card { padding: 1.5rem; }
+.stat-icon-wrapper { display: flex; align-items: center; justify-content: center; width: 48px; height: 48px; border-radius: var(--radius-sm); }
+.stat-icon-wrapper.green { background: rgba(16,185,129,0.12); }
+.stat-icon-wrapper.blue { background: rgba(96,165,250,0.12); }
+.stat-icon-wrapper.purple { background: rgba(168,85,247,0.12); }
+.stat-icon-wrapper.orange { background: rgba(249,115,22,0.12); }
+.content-grid { display: grid; grid-template-columns: 2.5fr 1fr; gap: 1.5rem; }
+.main-col { display: flex; flex-direction: column; gap: 1.5rem; }
+.side-col { display: flex; flex-direction: column; gap: 1.5rem; }
+.progress-bar { width: 100%; height: 6px; background: var(--surface-2); border-radius: var(--radius-full); overflow: hidden; }
+.progress { height: 100%; border-radius: var(--radius-full); }
+.distribution-item { display: flex; flex-direction: column; gap: 0.5rem; }
+.dist-header { display: flex; justify-content: space-between; align-items: center; }

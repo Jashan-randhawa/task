@@ -12,10 +12,10 @@ export default function AnalyticsPage() {
         </div>
         
         <div className="flex gap-4">
-          <button className="btn btn-secondary bg-white">
+          <button className="btn btn-secondary">
              <CalendarIcon size={16} /> Last 30 Days
           </button>
-          <button className="btn btn-primary bg-black" style={{ backgroundColor: '#000' }}>
+          <button className="btn btn-primary">
              <Download size={16} /> Export Report
           </button>
         </div>
@@ -24,7 +24,7 @@ export default function AnalyticsPage() {
       <div className="stats-grid mb-8">
          <div className="stat-card">
            <div className="stat-icon-wrapper green">
-             <Target size={20} color="#16a34a" />
+             <Target size={20} color="#10b981" />
            </div>
            <p className="text-gray text-sm mt-4">Fulfillment Rate</p>
            <h2 className="text-3xl font-bold mb-1">94.2%</h2>
@@ -33,7 +33,7 @@ export default function AnalyticsPage() {
 
          <div className="stat-card">
            <div className="stat-icon-wrapper blue">
-             <Clock size={20} color="#2563eb" />
+             <Clock size={20} color="#60a5fa" />
            </div>
            <p className="text-gray text-sm mt-4">Avg. Time-to-Hire</p>
            <h2 className="text-3xl font-bold mb-1">42m</h2>
@@ -42,7 +42,7 @@ export default function AnalyticsPage() {
 
          <div className="stat-card">
            <div className="stat-icon-wrapper purple">
-             <DollarSign size={20} color="#9333ea" />
+             <DollarSign size={20} color="#a855f7" />
            </div>
            <p className="text-gray text-sm mt-4">Total Expenditure</p>
            <h2 className="text-3xl font-bold mb-1">$124.5k</h2>
@@ -51,7 +51,7 @@ export default function AnalyticsPage() {
          
          <div className="stat-card">
            <div className="stat-icon-wrapper orange">
-             <Award size={20} color="#ea580c" />
+             <Award size={20} color="#f97316" />
            </div>
            <p className="text-gray text-sm mt-4">Top Rated Talent</p>
            <h2 className="text-3xl font-bold mb-1">4.9/5.0</h2>
@@ -120,7 +120,7 @@ export default function AnalyticsPage() {
                <p className="text-sm text-slate-300 relative z-10 mb-6 leading-relaxed">
                   Booking 'Technical Crew' more than 14 days in advance has actively reduced your hourly expenditure by 18% in Q4.
                </p>
-               <button className="btn w-full bg-white text-slate-900 justify-center font-bold relative z-10">View Full Insights</button>
+               <button className="btn w-full btn-secondary justify-center font-bold relative z-10 text-white border-slate-600 hover:bg-slate-700">View Full Insights</button>
             </div>
          </div>
       </div>
