@@ -124,6 +124,15 @@ body {
 
 .nav-link:hover { color: var(--surface-tint); }
 
+a:focus-visible,
+button:focus-visible,
+input:focus-visible,
+select:focus-visible,
+textarea:focus-visible {
+  outline: 3px solid var(--surface-tint-20);
+  outline-offset: 2px;
+}
+
 .nav-link.active {
   color: var(--on-surface);
   font-weight: 600;
@@ -463,7 +472,32 @@ body {
   font-size: 0.875rem;
   color: var(--secondary);
   line-height: 1.6;
-  margin-bottom: 1.75rem;
+  margin-bottom: 1rem;
+}
+
+.quick-facts {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.6rem;
+  margin-bottom: 1.5rem;
+}
+
+.quick-fact-chip {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.38rem;
+  padding: 0.4rem 0.7rem;
+  border-radius: var(--r-full);
+  background: var(--surface-low);
+  color: var(--on-surface-variant);
+  font-size: 0.7rem;
+  font-weight: 600;
+  letter-spacing: 0.02em;
+  border: 1px solid var(--outline-faint);
+}
+
+.quick-fact-chip .material-symbols-outlined {
+  color: var(--surface-tint);
 }
 
 /* ═══════════════════════════════════
@@ -1073,6 +1107,8 @@ select {
   .review-bento { grid-template-columns: 1fr; }
   .ready-badge { grid-column: span 1; }
   .category-grid { grid-template-columns: 1fr 1fr; }
+  .quick-facts { gap: 0.45rem; }
+  .quick-fact-chip { font-size: 0.66rem; }
 
   .page-sidebar { position: static; height: auto; padding: 0 1.5rem 2.5rem; }
   .guide-card   { flex: unset; }
@@ -1407,8 +1443,9 @@ select {
   align-items: center;
   justify-content: center;
   margin-left: -10px;
-  first-of-type: { margin-left: 0; }
 }
+
+.success-avatar-placeholder:first-of-type { margin-left: 0; }
 
 .success-avatar-stack > *:first-child { margin-left: 0; }
 
