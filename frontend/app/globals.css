@@ -1407,8 +1407,9 @@ select {
   align-items: center;
   justify-content: center;
   margin-left: -10px;
-  first-of-type: { margin-left: 0; }
 }
+
+.success-avatar-placeholder:first-of-type { margin-left: 0; }
 
 .success-avatar-stack > *:first-child { margin-left: 0; }
 
