@@ -1,0 +1,51 @@
+{
+  "kind": "collectionType",
+  "collectionName": "requirements",
+  "info": {
+    "singularName": "requirement",
+    "pluralName": "requirements",
+    "displayName": "Requirement",
+    "description": "Event hiring requirement submission"
+  },
+  "options": {
+    "draftAndPublish": false
+  },
+  "attributes": {
+    "eventName": {
+      "type": "string",
+      "required": true
+    },
+    "eventType": {
+      "type": "string",
+      "required": true
+    },
+    "dateType": {
+      "type": "enumeration",
+      "enum": ["single", "range"],
+      "required": true
+    },
+    "startDate": {
+      "type": "date",
+      "required": true
+    },
+    "endDate": {
+      "type": "date"
+    },
+    "location": {
+      "type": "string",
+      "required": true
+    },
+    "venue": {
+      "type": "string"
+    },
+    "hiringFor": {
+      "type": "enumeration",
+      "enum": ["planner", "performer", "crew"],
+      "required": true
+    },
+    "details": {
+      "type": "json",
+      "required": true
+    }
+  }
+}
