@@ -284,7 +284,7 @@ export default function MultiStepRequirementForm() {
                       Edit
                     </button>
                   </div>
-                  {[
+                  {([
                     ['Event Name', state.eventName],
                     ['Event Type', state.eventType],
                     ['Date', state.dateType === 'range'
@@ -292,7 +292,9 @@ export default function MultiStepRequirementForm() {
                       : state.startDate],
                     ['Location', state.location],
                     state.venue ? ['Venue', state.venue] : null,
-                  ].filter(Boolean).map(([k, v]) => (
+                  ] as Array<[string, string] | null>)
+                    .filter((entry): entry is [string, string] => entry !== null)
+                    .map(([k, v]) => (
                     <div className="review-row" key={k as string}>
                       <span className="review-key">{k}</span>
                       <span className="review-val">{v}</span>
