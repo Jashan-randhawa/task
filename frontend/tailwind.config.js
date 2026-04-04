@@ -1,0 +1,53 @@
+/** @type {import('tailwindcss').Config} */
+module.exports = {
+  content: [
+    './app/**/*.{js,ts,jsx,tsx}',
+    './components/**/*.{js,ts,jsx,tsx}',
+  ],
+  theme: {
+    extend: {
+      colors: {
+        'surface-tint': '#4d44e3',
+        primary: '#000000',
+        outline: '#76777d',
+        'surface-variant': '#d3e4fe',
+        'surface-container': '#e5eeff',
+        background: '#f8f9ff',
+        'error-container': '#ffdad6',
+        'on-primary-fixed': '#0f0069',
+        'surface-container-highest': '#d3e4fe',
+        'surface-dim': '#cbdbf5',
+        'primary-fixed': '#e2dfff',
+        'secondary-fixed': '#d5e3fd',
+        surface: '#f8f9ff',
+        secondary: '#515f74',
+        'outline-variant': '#c6c6cd',
+        'on-surface-variant': '#45464d',
+        'primary-container': '#0f0069',
+        error: '#ba1a1a',
+        'secondary-container': '#d5e3fd',
+        'surface-container-high': '#dce9ff',
+        'on-primary': '#ffffff',
+        'on-secondary': '#ffffff',
+        'on-surface': '#0b1c30',
+        'surface-container-lowest': '#ffffff',
+        'surface-container-low': '#eff4ff',
+        'on-secondary-container': '#57657b',
+        'surface-bright': '#f8f9ff',
+        'on-background': '#0b1c30',
+      },
+      borderRadius: {
+        DEFAULT: '0.25rem',
+        lg: '0.5rem',
+        xl: '0.75rem',
+        full: '9999px',
+      },
+      fontFamily: {
+        headline: ['Manrope'],
+        body: ['Inter'],
+        label: ['Inter'],
+      },
+    },
+  },
+  plugins: [],
+};
