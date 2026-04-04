@@ -21,6 +21,16 @@ export default function HomePage() {
             <p className="aside-sub">
               Connect with vetted planners, performers, and crew — post your requirement in under 4 minutes.
             </p>
+            <div className="aside-stats" aria-label="Platform metrics">
+              <div className="aside-stat">
+                <strong>45k+</strong>
+                <span>Verified talent</span>
+              </div>
+              <div className="aside-stat">
+                <strong>92%</strong>
+                <span>Match accuracy</span>
+              </div>
+            </div>
           </div>
 
           <nav className="step-progress" aria-label="Form steps">

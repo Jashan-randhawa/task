@@ -130,6 +130,10 @@ export default function MultiStepRequirementForm() {
             <h1 className="form-title">{meta.title}</h1>
             <span className="progress-pct">{meta.pct}%</span>
           </div>
+          <div className="progress-meta-row">
+            <span className="progress-meta-pill">Autosaved locally</span>
+            <span className="progress-meta-pill">{5 - step} step{5 - step === 1 ? '' : 's'} remaining</span>
+          </div>
           <div className="progress-track">
             <div className="progress-fill" style={{ width: `${meta.pct}%` }} />
           </div>
