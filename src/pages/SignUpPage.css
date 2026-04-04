@@ -1,0 +1,131 @@
+.signup-layout {
+  position: fixed;
+  inset: 0;
+  z-index: 9999;
+  background-color: var(--surface);
+  display: flex;
+}
+
+.signup-container {
+  display: flex;
+  width: 100%;
+  height: 100%;
+}
+
+.signup-brand {
+  flex: 1;
+  background: linear-gradient(135deg, rgba(13, 148, 136, 0.8) 0%, rgba(126, 34, 206, 0.8) 100%), url('/signup-bg.png') center/cover no-repeat;
+  position: relative;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  padding: 4rem;
+  justify-content: center;
+}
+
+.brand-overlay {
+  position: absolute;
+  inset: 0;
+  background: url('data:image/svg+xml;utf8,<svg width="20" height="20" xmlns="http://www.w3.org/2000/svg"><circle cx="2" cy="2" r="1" fill="rgba(255,255,255,0.05)"/></svg>') repeat;
+  z-index: 1;
+}
+
+.abstract-shapes {
+  position: absolute;
+  inset: 0;
+  overflow: hidden;
+  z-index: 2;
+  pointer-events: none;
+}
+
+.shape {
+  position: absolute;
+  border-radius: 50%;
+  filter: blur(80px);
+}
+
+.shape-1 {
+  width: 500px;
+  height: 500px;
+  background: rgba(45, 212, 191, 0.4);
+  top: -100px;
+  left: -200px;
+}
+
+.shape-2 {
+  width: 600px;
+  height: 600px;
+  background: rgba(168, 85, 247, 0.4);
+  bottom: -200px;
+  right: -100px;
+}
+
+.signup-form-wrapper {
+  flex: 1.2;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: white;
+  position: relative;
+  overflow-y: auto;
+}
+
+.signup-form-inner {
+  width: 100%;
+  max-width: 440px;
+  padding: 2rem;
+}
+
+.strength-meter {
+  display: flex;
+  gap: 4px;
+}
+
+.strength-bar {
+  flex: 1;
+  height: 4px;
+  border-radius: 2px;
+  background-color: #e2e8f0;
+  transition: all 0.3s ease;
+}
+
+.strength-bar.active.weak { background-color: #ef4444; }
+.strength-bar.active.fair { background-color: #f59e0b; }
+.strength-bar.active.strong { background-color: #10b981; }
+
+.strength-1, .strength-2 { color: #ef4444; }
+.strength-3 { color: #f59e0b; }
+.strength-4 { color: #10b981; }
+
+.signup-btn {
+  background: linear-gradient(135deg, #0d9488 0%, #0f766e 100%);
+  transition: transform 0.2s, box-shadow 0.2s;
+}
+
+.signup-btn:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 10px 25px -5px rgba(13, 148, 136, 0.4);
+}
+
+.social-btn {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: white;
+  border: 1px solid var(--border-color);
+  border-radius: var(--radius-sm);
+  padding: 0.75rem;
+  transition: all 0.2s;
+}
+
+.social-btn:hover {
+  background: #f8fafc;
+  border-color: #cbd5e1;
+}
+
+/* Responsiveness */
+@media (max-width: 900px) {
+  .signup-brand {
+    display: none;
+  }
+}

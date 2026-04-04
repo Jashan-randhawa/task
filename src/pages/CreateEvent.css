@@ -1,0 +1,209 @@
+.create-event-layout {
+  display: flex;
+  min-height: calc(100vh - 72px);
+  background-color: var(--bg-color);
+}
+
+.create-sidebar {
+  width: 280px;
+  padding: 3rem 2rem;
+  border-right: 1px solid var(--border-color);
+}
+
+.steps-container {
+  display: flex;
+  flex-direction: column;
+  gap: 2.5rem;
+  position: relative;
+}
+
+.step-indicator {
+  display: flex;
+  gap: 1rem;
+  position: relative;
+  z-index: 2;
+}
+
+/* Connective line */
+.step-indicator:not(:last-child)::after {
+  content: '';
+  position: absolute;
+  top: 32px;
+  left: 15px;
+  bottom: -2.5rem;
+  width: 2px;
+  background-color: var(--border-color);
+  z-index: -1;
+}
+
+.step-indicator.active .step-num {
+  background-color: var(--primary);
+  color: white;
+  border-color: var(--primary);
+  box-shadow: 0 0 0 4px #eef2ff;
+}
+
+.step-indicator.completed .step-num {
+  background-color: #f1f5f9;
+  color: var(--text-dark);
+  border-color: #cbd5e1;
+}
+
+.step-indicator.locked .step-num {
+  background-color: white;
+  color: var(--text-gray);
+  border-color: var(--border-color);
+}
+
+.step-indicator.locked .step-details {
+  opacity: 0.6;
+}
+
+.step-num {
+  width: 32px;
+  height: 32px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 0.875rem;
+  font-weight: 600;
+  background-color: white;
+  border: 2px solid;
+}
+
+.create-main {
+  flex: 1;
+  padding: 3rem;
+  display: flex;
+  justify-content: center;
+}
+
+.create-container {
+  width: 100%;
+  max-width: 900px;
+  display: flex;
+  flex-direction: column;
+}
+
+.step-main {
+  flex: 2;
+}
+
+.step-sidebar-right {
+  flex: 1;
+}
+
+/* Step 1 specifics */
+.input-with-icon {
+  position: relative;
+}
+.pl-10 { padding-left: 2.5rem !important; }
+
+.role-cards {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1.5rem;
+}
+
+.role-card {
+  background: #f8fafc;
+  border: 1px solid var(--border-color);
+  border-radius: var(--radius-md);
+  padding: 1.5rem;
+  cursor: pointer;
+  transition: all 0.2s;
+}
+
+.role-card:hover {
+  border-color: var(--primary);
+  background: white;
+  box-shadow: var(--shadow-sm);
+}
+
+.role-icon {
+  width: 40px;
+  height: 40px;
+  border-radius: var(--radius-sm);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 1rem;
+  font-size: 1.25rem;
+}
+
+.role-icon.blue { background: #e0e7ff; color: #4338ca; }
+.role-icon.purple { background: #fae8ff; color: #c026d3; }
+.role-icon.indigo { background: #e0e7ff; color: #3b82f6; }
+
+/* Step 2 specifics */
+.performer-types {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1.5rem;
+}
+
+.performer-card {
+  position: relative;
+  background: #ffffff;
+  border: 1px solid var(--border-color);
+  border-radius: var(--radius-md);
+  padding: 1.5rem;
+  cursor: pointer;
+  transition: all 0.2s;
+}
+
+.performer-card.active {
+  border: 2px solid var(--primary);
+  background: #f8faff;
+}
+
+.performer-card .icon {
+  font-size: 2rem;
+}
+
+.guide-card {
+  background: #f8fafc;
+  border-radius: var(--radius-md);
+  padding: 1.5rem;
+}
+
+.guide-items {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+
+.guide-item {
+  display: flex;
+  gap: 1rem;
+  align-items: flex-start;
+}
+
+.icon-badge {
+  width: 24px;
+  height: 24px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 0.75rem;
+  flex-shrink: 0;
+}
+
+.icon-badge.blue { background: #e0e7ff; color: var(--primary); }
+.icon-badge.purple { background: #fae8ff; color: #9333ea; }
+
+.nexus-promo {
+  height: 120px;
+  border-radius: var(--radius-md);
+  position: relative;
+  overflow: hidden;
+  background: linear-gradient(135deg, #4b44e0, #2c258d);
+}
+
+.nexus-promo .promo-bg {
+  position: absolute;
+  inset: 0;
+  background-image: radial-gradient(circle at 50% -20%, rgba(255,255,255,0.4), transparent 70%);
+}

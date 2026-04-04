@@ -1,0 +1,49 @@
+.analytics-layout {
+  padding: 3rem;
+  max-width: 1300px;
+  margin: 0 auto;
+  width: 100%;
+}
+
+.analytics-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end;
+  margin-bottom: 2rem;
+}
+
+.stat-icon-wrapper.green {
+  background-color: #dcfce7;
+}
+
+.stat-icon-wrapper.orange {
+  background-color: #ffedd5;
+}
+
+.chart-legend {
+  font-size: 0.75rem;
+  font-weight: 600;
+  color: var(--text-gray);
+}
+
+.legend-dot {
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  display: inline-block;
+}
+
+.complex-chart {
+  position: relative;
+  min-height: 250px;
+  border-bottom: 1px dashed var(--border-color);
+  margin-bottom: 2rem;
+}
+
+.chart-group {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  height: 100%;
+  justify-content: flex-end;
+}
