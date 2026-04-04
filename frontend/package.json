@@ -1,0 +1,12 @@
+{
+  "name": "vercel-root",
+  "version": "1.0.0",
+  "private": true,
+  "scripts": {
+    "vercel-build": "npm --prefix frontend ci --include=dev && npm --prefix frontend run build"
+  },
+  "dependencies": {
+    "next": "14.2.35"
+  },
+  "packageManager": "npm@10"
+}
