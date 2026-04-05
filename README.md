@@ -2,6 +2,8 @@
 
 A modern, responsive frontend application for managing talent, events, contracts, and analytics — built for event architects and talent coordinators.
 
+🔗 **Live Demo:** [https://remotejob-omega.vercel.app](https://remotejob-omega.vercel.app)
+
 ---
 
 ## Tech Stack
@@ -114,6 +116,19 @@ npm run lint
 - **Sidebar** — Navigation sidebar for all main routes.
 - **ArchitectDashboard** — Animated stat cards, bar charts with time filters (7D / 30D / 90D), and activity feeds.
 - **TalentPage** — Filterable talent grid with bookmarking, type filters (speaker / performer / crew), and search.
+
+---
+
+## Deployment
+
+The app is deployed on **Vercel** at:
+👉 [https://remotejob-omega.vercel.app](https://remotejob-omega.vercel.app)
+
+To deploy your own instance:
+1. Push the `frontend/` folder to a GitHub repository.
+2. Import the repo in [Vercel](https://vercel.com).
+3. Set the **Root Directory** to `frontend` and use the default Vite build settings.
+4. Click **Deploy**.
 
 ---
 
