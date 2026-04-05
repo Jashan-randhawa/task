@@ -1,5 +1,6 @@
 import React from 'react';
 import { BrowserRouter, Routes, Route, Navigate } from 'react-router-dom';
+import { Analytics } from '@vercel/analytics/react';
 import './App.css';
 import Header from './components/Header';
 import Sidebar from './components/Sidebar';
@@ -44,6 +45,7 @@ function App() {
   return (
     <BrowserRouter>
       <AppContent />
+      <Analytics />
     </BrowserRouter>
   );
 }
